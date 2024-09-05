@@ -2,7 +2,7 @@
 src/staticfiles/vendors
 
 # Other files
-.idea/
+#.idea/
 
 # Ignore local static file root
 # or 'local-cdn'
