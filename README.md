@@ -18,6 +18,7 @@ This project aims to answer key business questions by retrieving data from a dat
 
 ## Graphs Examples
 ### What countries do most of our sales come from?
+
 '''
 df = getData('''select country.country, count(customer.customer_id) as country_count from country
 inner join city
@@ -30,14 +31,17 @@ group by country.country
 order by country_count desc
 limit 5;''')
 '''
+
 ![image](https://github.com/user-attachments/assets/9b28778c-eecf-4ee7-a18e-24c91f95d8f5)
 
 ### What is the average length of the films?
+
 '''
 df = getData('''select length from film
 order by length;''')
 mean = getData('''select avg(length) from film;''').iloc[0,0]
 '''
+
 ![image](https://github.com/user-attachments/assets/553a9ea0-b3a4-4908-b8a3-a23753f9dac1)
 
 
